@@ -16,6 +16,16 @@ window.onload = function(){
     else if (operator == "substract"){
       document.getElementById('ans').value = substract(num1, num2);
     }
+    else if (operator == "multiply") {
+        document.getElementById('ans').value = multiply(num1, num2);
+    }
+    else if (operator == "mod") {
+        if (num1 < 0 || num2 <= 0 || (num1 * 10) % 10 != 0 || (num2 * 10) % 10 != 0)
+        {
+            alert("Bad operator!")
+        }
+        document.getElementById('ans').value = mod(num1, num2);
+    }
     else {
       alert("Bad operator!")
     }
